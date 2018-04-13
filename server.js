@@ -2,9 +2,9 @@ var express = require('express');
 
 var app = express();
 
-app.get('/', function(req, res) {
+app.get('/:id', function(req, res) {
 	console.log('Otrzymałem żądanie GET od strony głównej');
-	res.send('Identyfikator, który został dopisany to: ');
+	res.send('Identyfikator, który został dopisany to: ' + req.params.id);
 });
 
 app.post('/', function(req, res) {
